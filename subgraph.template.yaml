@@ -1,0 +1,26 @@
+specVersion: 0.0.4
+schema:
+  file: ./schema.graphql
+dataSources:
+  {{#dataSources}}
+  - kind: ethereum/contract
+    name: "Aggregator-{{version}}"
+    network: "{{network}}"
+    source:
+      address: "{{address}}"
+      abi: AggregatorContract_{{version}}
+      startBlock: {{ creationBlockNumber }}
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Aggregator
+      abis:
+        - name: AggregatorContract_{{version}}
+          file: ./abis/AggregatorContract-{{version}}.json
+      eventHandlers:
+        - event: AggregatorUpdated(address,address,address)
+          handler: handleAggregatorUpdated
+      file: ./src/aggregator.ts
+  {{/dataSources}}

@@ -1,0 +1,6 @@
+type Aggregator @entity {
+  "The input of the aggregator"
+  id: ID!
+  input: String!
+  outputs: [String!]!
+}

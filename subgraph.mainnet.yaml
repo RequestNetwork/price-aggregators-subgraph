@@ -1,0 +1,24 @@
+specVersion: 0.0.4
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: "Aggregator-0_1_0"
+    network: "mainnet"
+    source:
+      address: "0xC5519f3fcECC8EC85caaF8836563dEe9a00080f9"
+      abi: AggregatorContract_0_1_0
+      startBlock: 12225729
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Aggregator
+      abis:
+        - name: AggregatorContract_0_1_0
+          file: ./abis/AggregatorContract-0_1_0.json
+      eventHandlers:
+        - event: AggregatorUpdated(address,address,address)
+          handler: handleAggregatorUpdated
+      file: ./src/aggregator.ts
