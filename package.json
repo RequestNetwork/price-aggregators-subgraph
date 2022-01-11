@@ -8,7 +8,7 @@
     "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/",
     "create-local": "graph create --node http://localhost:8020/ RequestNetwork/price-aggregators-private --access-token ''",
     "remove-local": "graph remove --node http://localhost:8020/ RequestNetwork/price-aggregators-private --access-token ''",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 RequestNetwork/price-aggregators-private --access-token '' ./subgraph.private.yaml"
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 RequestNetwork/price-aggregators-private --access-token ''"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.25.1",
