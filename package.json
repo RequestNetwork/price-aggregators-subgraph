@@ -12,10 +12,11 @@
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.25.1",
-    "@graphprotocol/graph-ts": "0.24.1"
+    "@graphprotocol/graph-ts": "0.24.1",
+    "ethers": "^5.5.3"
   },
   "devDependencies": {
-    "@requestnetwork/smart-contracts": "0.28.1-next.1605",
+    "@requestnetwork/smart-contracts": "0.28.1-next.1637",
     "@types/mustache": "^4.1.2",
     "@types/node": "^16.11.12",
     "mustache": "^4.2.0",
