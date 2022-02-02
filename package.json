@@ -15,7 +15,7 @@
     "@graphprotocol/graph-ts": "0.24.1"
   },
   "devDependencies": {
-    "@requestnetwork/smart-contracts": "0.28.1-next.1637",
+    "@requestnetwork/smart-contracts": "0.28.1-next.1640",
     "@types/mustache": "^4.1.2",
     "@types/node": "^16.11.12",
     "ethers": "^5.5.3",
