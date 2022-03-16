@@ -1,5 +1,5 @@
 import { Address, log, store } from "@graphprotocol/graph-ts";
-import { AggregatorUpdated } from "../generated/Aggregator/AggregatorContract";
+import { AggregatorUpdated } from "../generated/Aggregator-0_2_0/AggregatorContract_0_2_0";
 import { Aggregator } from "../generated/schema";
 
 function saveAggregator(input: string, output: string): void {
@@ -34,7 +34,7 @@ function removeAggregator(input: string, output: string): void {
     } else {
       log.info("keeping {} with {} outputs", [
         input,
-        outputs.length.toString()
+        outputs.length.toString(),
       ]);
       agg.outputs = outputs;
       agg.save();
