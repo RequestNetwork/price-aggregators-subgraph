@@ -22,3 +22,23 @@ dataSources:
         - event: AggregatorUpdated(address,address,address)
           handler: handleAggregatorUpdated
       file: ./src/aggregator.ts
+  - kind: ethereum/contract
+    name: "Aggregator-0_2_0"
+    network: "mainnet"
+    source:
+      address: "0x0818Ad7016138f0A40DFAe30F64a923c2A8F61bA"
+      abi: AggregatorContract_0_2_0
+      startBlock: 14448210
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Aggregator
+      abis:
+        - name: AggregatorContract_0_2_0
+          file: ./abis/AggregatorContract-0_2_0.json
+      eventHandlers:
+        - event: AggregatorUpdated(address,address,address)
+          handler: handleAggregatorUpdated
+      file: ./src/aggregator.ts
