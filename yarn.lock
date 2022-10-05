@@ -411,10 +411,10 @@
   dependencies:
     assemblyscript "0.19.10"
 
-"@requestnetwork/smart-contracts@0.28.1-next.1691":
-  version "0.28.1-next.1691"
-  resolved "https://registry.yarnpkg.com/@requestnetwork/smart-contracts/-/smart-contracts-0.28.1-next.1691.tgz#3c0fb956da949815476f633028a576ec618d5b8e"
-  integrity sha512-BsCXZsu8HNBDpKx5Y7KO78U+da4EcYMAPkaSdaT/VKmF6t4+ltoO5NaGBJ4wr3HcJ8jm3yegH/5L8zONZaxJ4w==
+"@requestnetwork/smart-contracts@0.28.1-next.1781":
+  version "0.28.1-next.1781"
+  resolved "https://registry.yarnpkg.com/@requestnetwork/smart-contracts/-/smart-contracts-0.28.1-next.1781.tgz#02e01f09b61e9ccb973e28ac31992a790031ec45"
+  integrity sha512-mvHBE9fh2BYnsoX1fakmiYN6L4943ufNPHSfObk4Ig5wBTABe+cz/2fZvsTpzJVbaBtHb0BFBq/MC55tMtUdyw==
   dependencies:
     tslib "2.3.1"
 

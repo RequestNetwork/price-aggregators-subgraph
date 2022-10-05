@@ -1,0 +1,44 @@
+specVersion: 0.0.4
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: "Aggregator-0_1_0"
+    network: "goerli"
+    source:
+      address: "0x70bE16E6B7F465bED2237Cf609341A29C019B3bf"
+      abi: AggregatorContract_0_1_0
+      startBlock: 7108894
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Aggregator
+      abis:
+        - name: AggregatorContract_0_1_0
+          file: ./abis/AggregatorContract-0_1_0.json
+      eventHandlers:
+        - event: AggregatorUpdated(address,address,address)
+          handler: handleAggregatorUpdated
+      file: ./src/aggregator.ts
+  - kind: ethereum/contract
+    name: "Aggregator-0_2_0"
+    network: "goerli"
+    source:
+      address: "0x70bE16E6B7F465bED2237Cf609341A29C019B3bf"
+      abi: AggregatorContract_0_2_0
+      startBlock: 7108894
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Aggregator
+      abis:
+        - name: AggregatorContract_0_2_0
+          file: ./abis/AggregatorContract-0_2_0.json
+      eventHandlers:
+        - event: AggregatorUpdated(address,address,address)
+          handler: handleAggregatorUpdated
+      file: ./src/aggregator.ts
