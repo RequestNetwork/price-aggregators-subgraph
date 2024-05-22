@@ -1,5 +1,5 @@
-node_modules
-build
-data
-generated
-.env
+/node_modules/
+/build/
+/generated/
+/.env
+/yarn-error.log
