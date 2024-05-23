@@ -3,12 +3,12 @@ schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
-    name: "Aggregator-0_1_0"
-    network: "arbitrum-rinkeby"
+    name: "Aggregator-0_2_0"
+    network: "optimism"
     source:
-      address: "0xEEc4790306C43DC00cebbE4D0c36Fadf8634B533"
-      abi: AggregatorContract_0_1_0
-      startBlock: 8403926
+      address: "0x0818Ad7016138f0A40DFAe30F64a923c2A8F61bA"
+      abi: AggregatorContract_0_2_0
+      startBlock: 35490284
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -16,8 +16,8 @@ dataSources:
       entities:
         - Aggregator
       abis:
-        - name: AggregatorContract_0_1_0
-          file: ./abis/AggregatorContract-0_1_0.json
+        - name: AggregatorContract_0_2_0
+          file: ./abis/AggregatorContract-0_2_0.json
       eventHandlers:
         - event: AggregatorUpdated(address,address,address)
           handler: handleAggregatorUpdated

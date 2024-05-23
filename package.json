@@ -2,20 +2,19 @@
   "name": "aggregators-subgraph",
   "license": "MIT",
   "scripts": {
-    "codegen": "graph codegen",
-    "build": "graph build",
     "prepare": "ts-node scripts/prepare.ts",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/",
-    "create-local": "graph create --node http://localhost:8020/ RequestNetwork/price-aggregators-private --access-token ''",
-    "remove-local": "graph remove --node http://localhost:8020/ RequestNetwork/price-aggregators-private --access-token ''",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 RequestNetwork/price-aggregators-private --access-token ''"
+    "codegen-local": "graph codegen subgraph.private.yaml",
+    "build-local": "graph build subgraph.private.yaml",
+    "create-local": "graph create --node http://localhost:8020/ RequestNetwork/price-aggregators-private",
+    "remove-local": "graph remove --node http://localhost:8020/ RequestNetwork/price-aggregators-private",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 RequestNetwork/price-aggregators-private subgraph.private.yaml"
   },
   "dependencies": {
-    "@graphprotocol/graph-cli": "0.25.1",
-    "@graphprotocol/graph-ts": "0.24.1"
+    "@graphprotocol/graph-cli": "^0.72.1",
+    "@graphprotocol/graph-ts": "^0.35.1"
   },
   "devDependencies": {
-    "@requestnetwork/smart-contracts": "0.28.1-next.1781",
+    "@requestnetwork/smart-contracts": "0.36.1-next.2036",
     "@types/mustache": "^4.1.2",
     "@types/node": "^16.11.12",
     "ethers": "^5.5.3",
